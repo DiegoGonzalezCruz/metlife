@@ -7,7 +7,7 @@ export const Navigation = () => {
         src="/img/logos/metlife-orienta.svg"
         alt="metlife orienta"
         width={200}
-        height={50}
+        height={40}
         className="w-5/6 bg-white md:h-1/3"
       />
     </nav>
