@@ -66,7 +66,10 @@ const ProgramModal = ({ program, isModalOpen, setIsModalOpen }: any) => {
             <ul className=" flex flex-row gap-2 items-center justify-between px-10">
               {contactArray.map((feat) => {
                 return (
-                  <li className="border border-secondaryDark px-4 py-2 rounded-xl flex flex-row items-center justify-center gap-2">
+                  <li
+                    key={feat.img}
+                    className="border border-secondaryDark px-4 py-2 rounded-xl flex flex-row items-center justify-center gap-2"
+                  >
                     <Image
                       src={feat.img}
                       width={20}
