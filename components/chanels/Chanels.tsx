@@ -4,7 +4,7 @@ import React from 'react'
 const channels = [
   {
     img: '/img/channels/Whatsapp.svg',
-    title: 'WhatsApp'
+    title: 'WhatsAppasd'
   },
   {
     img: '/img/channels/videollamada.svg',
