@@ -5,7 +5,7 @@ export const MainSlider = () => {
     <div className="w-full h-[50vh]  ">
       <div className="w-full h-full flex md:flex-row-reverse flex-col">
         <Image
-          src="/img/sliders/mainslider.png"
+          src="/img/sliders/mainSlider.png"
           width={500}
           height={500}
           className="object-cover h-full md:w-1/2 w-full"
