@@ -1,0 +1,2 @@
+GET http://careassistance.co/wp-json/wp/v2/personalizados
+content-type: application/json

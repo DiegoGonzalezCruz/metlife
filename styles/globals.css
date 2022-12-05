@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  /* identical to box height */
+  text-transform: uppercase;
+}
+
+h2 {
+  /* Subtítulos */
+  font-family: 'Titillium';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  /* identical to box height, or 94% */
+}
+
+p {
+  /* Parrafos */
+  font-family: 'Titillium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  /* identical to box height, or 150% */
+  color: #000000;
+}
+
+span {
+  /* Parrafos destacados */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+  color: #000000;
+}
+
+.bold-button {
+  /* Boton Bold */
+  font-family: 'Titillium';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  /* identical to box height */
+}
+
+.outlined-text {
+}
+
+@layer components {
+  .debug1 {
+    @apply border-2 border-error;
+  }
+  .debug2 {
+    @apply border-2 border-secondary;
+  }
+}
