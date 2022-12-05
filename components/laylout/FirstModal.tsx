@@ -9,21 +9,21 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
   if (isModalOpen) {
     return (
       <div
-        className={` top-0  w-screen h-screen bg-input/10 ${
+        className={` top-0  w-screen h-screen bg-input/50 ${
           !isModalOpen ? 'hidden' : 'fixed'
         }`}
       >
-        <div className="card h-fit mt-10 w-5/6 bg-white mx-auto relative rounded-xl">
-          <div className="wrapper w-3/4 mx-auto h-full py-10  ">
+        <div className="card h-fit mt-10 md:w-5/6 bg-white mx-auto relative rounded-xl">
+          <div className="wrapper w-3/4 mx-auto h-full py-10 flex flex-col gap-5 ">
             <div className="flex flex-row items-center justify-between">
-              <h2 className="text-primary">Atención:</h2>
+              <h2 className="text-primary text-2xl md:text-3xl">Atención:</h2>
               <FontAwesomeIcon
                 icon={faXmark}
                 className="text-3xl text-primary"
                 onClick={() => setIsModalOpen(false)}
               />
             </div>
-            <p className="font-Montserrat text-base">
+            <p className="font-Montserrat md:text-base text-xs">
               Declaro conocer y aceptar que la orientación médica es otorgada
               por profesionales de Care Assistance, quienes asumen la
               responsabilidad por los servicios otorgados en conformidad a la

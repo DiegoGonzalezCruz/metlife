@@ -5,13 +5,20 @@ export const Footer = () => {
   return (
     <footer className=" w-full mx-auto h-fit md:h-full bg-backgroundDark flex flex-col ">
       <div className="w-5/6  h-full flex flex-col items-center justify-center mx-auto ">
-        <div className="flex flex-row justify-between items-center py-5 w-full ">
+        <div className="flex flex-row justify-between items-center py-5 w-full  ">
           <Image
             src="/img/logos/metlife.png"
             alt="metlife"
             width={50}
             height={20}
             className=" h-fit w-1/3 md:h-5 md:w-fit"
+          />
+          <Image
+            src="/img/logos/poweredCA.png"
+            alt="metlife"
+            width={80}
+            height={20}
+            className=" h-fit w-1/3 md:h-10 md:w-fit"
           />
         </div>
         <div className="w-full flex flex-row  gap-5 my-2 ">
@@ -23,7 +30,7 @@ export const Footer = () => {
           </p>
         </div>
         <div className=" flex flex-row  gap-0  w-full items-end justify-between md:self-start mb-2 ">
-          <div className="">
+          <div className="flex gap-5">
             <p className="font-Titillium text-xs font-bold ">
               Chile / Compañías MetLife.
             </p>
@@ -41,13 +48,6 @@ export const Footer = () => {
               +56 2 2826 4790.
             </p>
           </div>
-          <Image
-            src="/img/logos/poweredCA.png"
-            alt="metlife"
-            width={80}
-            height={20}
-            className=" h-fit w-1/3 md:h-10 md:w-fit"
-          />
         </div>
       </div>
     </footer>

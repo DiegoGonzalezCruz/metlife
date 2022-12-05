@@ -5,8 +5,8 @@ import Button from '../buttons/Button'
 const features = [
   {
     description:
-      'Si quieres conocer más sobre como funcionan nuestros programas y el uso que podrás darle, inicia sesión aquí.',
-    img: '/img/sliders/familia.png'
+      'Compra aquí el medicamento genérico que necesitas y aprovecha el descuento que tenemos para ti.',
+    img: '/img/sliders/doctor.png'
   }
 ]
 

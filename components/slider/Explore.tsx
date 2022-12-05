@@ -33,7 +33,7 @@ export const Explore = () => {
             </span>
           </h2>
         </div>
-        <ul className="flex flex-row items-start justify-between gap-10 snap-x snap-mandatory w-full h-full  overflow-scroll">
+        <ul className="flex flex-row items-start justify-between gap-10 snap-x snap-mandatory w-full h-full  overflow-scroll  py-5">
           {benefits.map((benefit) => {
             return (
               <li
