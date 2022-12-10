@@ -47,8 +47,8 @@ export const Chanels = () => {
         Ponemos a tu disposición, canales de atención exclusivos y recursos de
         comunicación estratégica, creados a la medida de tus necesidades.
       </p>
-      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 md:gap-5 py-5 md:justify-between debug1 w-full">
-        {channels.map((channel) => {
+      <ul className="debug1 snap-x snap-mandatory flex flex-row overflow-scroll my-5 md:gap-5 py-5 md:justify-between debug1 w-full">
+        {channels.map((channel, idx) => {
           return (
             <li
               key={channel.title}
