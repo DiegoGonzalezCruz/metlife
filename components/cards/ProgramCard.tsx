@@ -17,10 +17,10 @@ const ProgramCard = ({ program, idx }: Program) => {
     <>
       <div
         id={`program${idx}`}
-        className=" shadow-xl rounded-xl snap-start md:snap-center w-full h-full md:w-1/4 shrink-0 first:ml-10 last:mr-10 flex flex-col items-center my-2 "
+        className="debug1 shadow-xl rounded-xl snap-start md:snap-center w-full h-full md:w-1/4 shrink-0 first:ml-10 last:mr-10 flex flex-col items-center my-2 "
       >
         <div className="w-full h-full flex flex-col items-center justify-around gap-5 px-5 py-5">
-          <div className=" w-full h-fit ">
+          <div className=" w-full h-fit debug1 flex flex-col gap-5">
             <Image
               src={program.acf.imagen}
               alt={program.acf.titulo}

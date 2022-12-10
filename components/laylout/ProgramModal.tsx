@@ -32,65 +32,66 @@ const ProgramModal = ({ program, isModalOpen, setIsModalOpen }: any) => {
           !isModalOpen ? 'hidden' : 'fixed'
         }`}
       >
-        <div className="card h-3/4 mt-10 w-1/2 bg-white mx-auto relative rounded-xl">
-          <div className="wrapper w-full mx-auto h-full  flex flex-col justify-between ">
-            <div className=" h-1/2  flex flex-row justify-between pl-10">
-              <div className=" flex flex-row items-center justify-around w-1/2 ">
+        <div className="card h-fit md:w-3/4 bg-white mx-auto  rounded-xl  relative">
+          <FontAwesomeIcon
+            icon={faXmark}
+            onClick={() => setIsModalOpen(false)}
+            className="cursor-pointer text-3xl text-input absolute top-5 right-5 z-20"
+          />
+          <div className="wrapper w-full mx-auto h-full  flex flex-col justify-between gap-5 debug1">
+            <div className=" h-1/2 debug1  flex flex-row justify-between  ">
+              <div className=" flex flex-row items-center justify-around w-1/2 md:w-1/3   translate-x-10 z-20">
                 <Image
-                  src={programToView.acf.icono}
-                  alt={programToView.acf.titulo}
-                  width={100}
-                  height={100}
+                  src={programToView.acf.icono_white}
+                  alt={programToView.acf.icono_white}
+                  width={400}
+                  height={400}
+                  className=" w-full"
                 />
-                <h2 className="font-Montserrat text-xl text-primary  w-1/2">
-                  {programToView.acf.pretitle}
-                  <br />
-                  <b>{programToView.acf.posttitle}</b>
-                </h2>
               </div>
-              <div className="w-1/2   h-full flex items-center justify-end  overflow-hidden">
+              <div className="w-1/2  h-full md:w-1/3 flex items-center  relative ">
                 <Image
                   alt={programToView.acf.titulo}
                   src={programToView.acf.imagen_modal}
-                  width={100}
-                  height={100}
-                  className="w-full   object-contain "
+                  width={400}
+                  height={400}
+                  className="w-full object-contain  "
                 />
+                <div className="absolute z-10 bg-gradient-to-r from-white/95 to-white/0 h-full w-full"></div>
               </div>
             </div>
             <div className=" h-fit w-full flex flex-col items-center justify-between px-10">
-              <p className="text-secondaryDark font-Titillium  w-full">
+              <p className="text-primary text-center font-Titillium  w-full">
                 {programToView.acf.description}
               </p>
             </div>
-            <ul className=" flex flex-row gap-2 items-center justify-between px-10">
+            <ul className=" flex md:flex-row flex-col gap-2 items-center justify-between md:px-10  px-10">
               {contactArray.map((feat) => {
                 return (
                   <li
                     key={feat.img}
-                    className="border border-secondaryDark px-4 py-2 rounded-xl flex flex-row items-center justify-center gap-2"
+                    className=" border border-primary rounded-full  w-full "
                   >
-                    <Image
-                      src={feat.img}
-                      width={20}
-                      height={40}
-                      alt={feat.title}
-                      className=" w-fit"
-                    />
-                    <p className="text-sm text-secondaryDark">{feat.title}</p>
+                    <div className=" h-12 py-2 w-full px-2 flex md:flex-row  items-center justify-center gap-2 ">
+                      <Image
+                        src={feat.img}
+                        width={20}
+                        height={40}
+                        alt={feat.title}
+                        className=" w-fit h-full"
+                      />
+                      <p className="text-base text-primary  w-fit">
+                        {feat.title}
+                      </p>
+                    </div>
                   </li>
                 )
               })}
             </ul>
             <div className=" bg-backgroundDark py-5 px-10 flex flex-row items-center justify-between h-fit w-full gap-10">
-              <p className="text-sm text-secondaryDark">
+              <p className="text-sm text-primary text-center">
                 {programToView.acf.horario}
               </p>
-              <FontAwesomeIcon
-                icon={faXmark}
-                onClick={() => setIsModalOpen(false)}
-                className="cursor-pointer text-3xl"
-              />
             </div>
           </div>
         </div>

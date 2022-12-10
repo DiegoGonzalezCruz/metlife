@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 const ProgramList = ({ programs }: Programs) => {
-  // console.log(programs, 'programs LIST')
+  console.log(programs, 'programs LIST')
 
   const [indexSnap, setIndexSnap] = useState(0)
 
@@ -25,12 +25,13 @@ const ProgramList = ({ programs }: Programs) => {
   }
   return (
     <div className="w-full h-full ">
-      <ul className="w-full h-fit   flex flex-row overflow-scroll snap-x snap-mandatory md:gap-10 py-5">
+      <ul className="w-full h-fit flex flex-row overflow-scroll snap-x snap-mandatory md:gap-10 py-5">
         {programs.map((program, idx) => {
           return (
             <ProgramCard program={program} key={program.acf.titulo} idx={idx} />
           )
         })}
+        {/* <div>hola</div> */}
       </ul>
       <div className="w-full mb-5 flex flex-row gap-5 items-center justify-center ">
         <FontAwesomeIcon
