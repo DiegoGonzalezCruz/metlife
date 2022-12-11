@@ -47,12 +47,12 @@ export const Chanels = () => {
         Ponemos a tu disposición, canales de atención exclusivos y recursos de
         comunicación estratégica, creados a la medida de tus necesidades.
       </p>
-      <ul className="debug1 snap-x snap-mandatory flex flex-row overflow-scroll my-5 md:gap-5 py-5 md:justify-between debug1 w-full">
+      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 md:gap-5 py-5 md:justify-between  w-full">
         {channels.map((channel, idx) => {
           return (
             <li
               key={channel.title}
-              className="debug1 rounded-xl shrink-0 w-full md:w-1/4  md:shadow-xl  snap-start flex flex-col items-center  gap-5 py-5 "
+              className=" rounded-xl shrink-0 w-full md:w-1/4  md:shadow-xl  snap-start flex flex-col items-center  gap-5 py-5 "
             >
               <Image
                 src={channel.img}

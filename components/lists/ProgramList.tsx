@@ -28,7 +28,7 @@ const ProgramList = ({ programs }: Programs) => {
           )
         })}
       </ul>
-      <ul className="w-full h-fit debug2 flex flex-row items-center justify-around">
+      <ul className="w-full h-fit  flex flex-row items-center justify-around">
         {bullets.map((bullet, idx) => {
           return (
             <li

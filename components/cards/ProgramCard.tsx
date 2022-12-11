@@ -26,7 +26,7 @@ const ProgramCard = ({ program, idx, setIndexSnap }: Program) => {
       <div
         ref={ref}
         id={`program${idx}`}
-        className="debug1 shadow-xl rounded-xl snap-start md:snap-center w-full h-full md:w-1/4 shrink-0 first:ml-10 last:mr-10 flex flex-col items-center mt-5 "
+        className=" shadow-xl rounded-xl snap-start md:snap-center w-full h-full md:w-1/4 shrink-0 first:ml-10 last:mr-10 flex flex-col items-center mt-5 "
       >
         <div className="w-full h-full flex flex-col items-center justify-around gap-5 px-5 py-5">
           <div className=" w-full h-fit  flex flex-col gap-5">

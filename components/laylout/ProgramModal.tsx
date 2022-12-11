@@ -38,8 +38,8 @@ const ProgramModal = ({ program, isModalOpen, setIsModalOpen }: any) => {
             onClick={() => setIsModalOpen(false)}
             className="cursor-pointer text-3xl text-input absolute top-5 right-5 z-20"
           />
-          <div className="wrapper w-full mx-auto h-full  flex flex-col justify-between gap-5 debug1">
-            <div className=" h-1/2 debug1  flex flex-row justify-between  ">
+          <div className="wrapper w-full mx-auto h-full  flex flex-col justify-between gap-5 ">
+            <div className=" h-1/2   flex flex-row justify-between  ">
               <div className=" flex flex-row items-center justify-around w-1/2 md:w-1/3   translate-x-10 z-20">
                 <Image
                   src={programToView.acf.icono_white}
