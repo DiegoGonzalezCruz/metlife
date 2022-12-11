@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Chanels } from '../components/chanels/Chanels'
+import { Channels } from '../components/chanels/Channels'
 import { Footer } from '../components/laylout/Footer'
 import { Navigation } from '../components/laylout/Navigation'
 import { ProgramSlider } from '../components/programs/ProgramSlider'
@@ -28,7 +28,7 @@ export default function Home({ programs }: Programs) {
         <Navigation />
         <MainSlider />
         <ProgramSlider programs={programs} />
-        <Chanels />
+        <Channels />
         <SecondarySlider />
         <Explore />
         <FirstModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />

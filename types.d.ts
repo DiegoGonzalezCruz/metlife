@@ -3,6 +3,7 @@ import { JsxElement } from 'typescript'
 
 export interface Program {
   idx?: number
+  ref?: any
   setIndexSnap: Dispatch<SetStateAction<boolean>>
   program: {
     acf: {
@@ -64,9 +65,21 @@ export interface Programs {
 }
 
 export interface Channel {
+  setIndexSnap: Dispatch<SetStateAction<boolean>>
+  idx?: number
   channel: {
     img: string
     title: string
+    text: JSX.Element
+  }
+}
+export interface Benefit {
+  setIndexSnap: Dispatch<SetStateAction<boolean>>
+  idx?: number
+  benefit: {
+    description: string
+    text: string
+    img: string
   }
 }
 export interface Channels {

@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import ButtonWhite from '../buttons/ButtonWhite'
+import BenefitCard from '../cards/BenefitCard'
 
 const benefits = [
   {
@@ -21,6 +22,8 @@ const benefits = [
 ]
 
 export const Explore = () => {
+  const [indexSnap, setIndexSnap] = useState<number>(0)
+
   return (
     <div className="w-full my-10 h-full ">
       <div className="w-5/6 mx-auto h-full ">
@@ -33,25 +36,27 @@ export const Explore = () => {
             </span>
           </h2>
         </div>
-        <ul className="flex flex-row items-start justify-between gap-10 snap-x snap-mandatory w-full h-full  overflow-scroll  py-5">
-          {benefits.map((benefit) => {
+        <ul className="flex flex-row items-start justify-between gap-10 snap-x snap-mandatory w-full h-full  overflow-scroll no-scrollbar py-5">
+          {benefits.map((benefit, idx) => {
+            return (
+              <BenefitCard
+                benefit={benefit}
+                setIndexSnap={setIndexSnap}
+                idx={idx}
+                key={benefit.img}
+              />
+            )
+          })}
+        </ul>
+        <ul className="md:hidden flex flex-row gap-5 items-center justify-center no-scrollbar">
+          {benefits.map((c, cidx) => {
             return (
               <li
-                key={benefit.description}
-                className="shrink-0 w-full md:w-1/4 h-full flex  flex-col gap-5  snap-start "
-              >
-                <Image
-                  src={benefit.img}
-                  width={300}
-                  height={300}
-                  alt={benefit.description}
-                  className="h-48 object-contain mx-auto "
-                />
-                <h2 className=" w-full text-center text-primary text-xl md:text-2xl font-Titillium">
-                  {benefit.description}
-                </h2>
-                <ButtonWhite className="bg-white">{benefit.text}</ButtonWhite>
-              </li>
+                key={cidx}
+                className={`h-4 w-4 ${
+                  cidx === indexSnap ? 'bg-primary' : 'bg-white'
+                } border border-primary rounded-full`}
+              ></li>
             )
           })}
         </ul>

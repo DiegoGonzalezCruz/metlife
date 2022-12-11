@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import Channel from './Channel'
 
 const channels = [
   {
@@ -32,7 +33,9 @@ const channels = [
   }
 ]
 
-export const Chanels = () => {
+export const Channels = () => {
+  const [indexSnap, setIndexSnap] = useState<number>(0)
+
   return (
     <div className="w-5/6 mx-auto py-10  ">
       <div className=" text-center w-full ">
@@ -47,27 +50,27 @@ export const Chanels = () => {
         Ponemos a tu disposición, canales de atención exclusivos y recursos de
         comunicación estratégica, creados a la medida de tus necesidades.
       </p>
-      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 md:gap-5 py-5 md:justify-between  w-full">
+      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 md:gap-5 py-5 md:justify-between no-scrollbar w-full">
         {channels.map((channel, idx) => {
           return (
-            <li
+            <Channel
+              channel={channel}
               key={channel.title}
-              className=" rounded-xl shrink-0 w-full md:w-1/4  md:shadow-xl  snap-start flex flex-col items-center  gap-5 py-5 "
-            >
-              <Image
-                src={channel.img}
-                width={80}
-                height={80}
-                alt={channel.title}
-                className="h-12 w-full "
-              />
-              <h2 className="text-secondaryDark text-base font-Fira text-center">
-                {channel.title}
-              </h2>
-              <div className="py-2 bg-secondaryDark  prose-p:font-light prose-p:text-white w-full text-center prose-p:font-Fira prose-p:leading-tight prose-p:text-base">
-                {channel.text}
-              </div>
-            </li>
+              idx={idx}
+              setIndexSnap={setIndexSnap}
+            />
+          )
+        })}
+      </ul>
+      <ul className="md:hidden flex flex-row gap-5 items-center justify-center no-scrollbar">
+        {channels.map((c, cidx) => {
+          return (
+            <li
+              key={cidx}
+              className={`h-4 w-4 ${
+                cidx === indexSnap ? 'bg-primary' : 'bg-white'
+              } border border-primary rounded-full`}
+            ></li>
           )
         })}
       </ul>
