@@ -18,7 +18,7 @@ const ProgramCard = ({ program, idx, setIndexSnap }: Program) => {
     setProgramToModal(prgm)
   }
   if (inView) {
-    // console.log('visible' + idx)
+    console.log('visible' + idx)
     setIndexSnap(idx)
   }
   return (
