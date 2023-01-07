@@ -9,7 +9,7 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
   if (isModalOpen) {
     return (
       <div
-        className={` top-0  w-screen h-screen bg-input/50 ${
+        className={`z-50 top-0  w-screen h-screen bg-input/50 ${
           !isModalOpen ? 'hidden' : 'fixed'
         }`}
       >

@@ -4,7 +4,7 @@ import { JsxElement } from 'typescript'
 export interface Program {
   idx?: number
   ref?: any
-  setIndexSnap: Dispatch<SetStateAction<boolean>>
+  setIndexSnap?: Dispatch<SetStateAction<boolean>>
   program: {
     acf: {
       titulo: string

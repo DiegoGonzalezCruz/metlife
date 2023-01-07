@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import { Program, ProgramFromREST, Programs, ProgramsModal } from '../../types'
+import { useState } from 'react'
+import { Program, ProgramsModal } from '../../types'
 import Button from '../buttons/Button'
 import ProgramModal from '../laylout/ProgramModal'
 import { useInView } from 'react-intersection-observer'
@@ -8,30 +8,18 @@ import { useInView } from 'react-intersection-observer'
 const ProgramCard = ({ program, idx, setIndexSnap }: Program) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [programToModal, setProgramToModal] = useState<ProgramsModal>()
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0.8
-  })
+
   const modalOpener = (prgm: ProgramsModal) => {
     // console.log('modal open', prgm)
     setIsModalOpen(true)
     setProgramToModal(prgm)
   }
 
-  useEffect(() => {
-    if (inView) {
-      // console.log('visible' + idx)
-      // console.log(entry, 'entry***')
-      setIndexSnap(idx)
-    }
-  }, [idx, inView, setIndexSnap])
-
   return (
     <>
       <div
-        ref={ref}
         id={`programa${idx}`}
-        className="debug1 shadow-xl rounded-xl snap-start md:snap-center scroll-smooth w-full h-full md:w-1/5 shrink-0 first:ml-10 last:mr-10 flex flex-col items-center mt-5 "
+        className=" shadow-xl rounded-xl snap-start md:snap-center scroll-smooth  h-full  shrink-0 first:ml-10 last:mr-10 flex flex-col items-center mt-5 "
       >
         <div className="w-full h-full flex flex-col items-center justify-around gap-5 px-5 py-5">
           <div className=" w-full h-fit  flex flex-col gap-5">
