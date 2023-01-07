@@ -15,7 +15,7 @@ const BenefitCard = ({ benefit, setIndexSnap, idx }: Benefit) => {
       // console.log(entry, 'entry***')
       setIndexSnap(idx)
     }
-  }, [inView])
+  }, [inView, idx, setIndexSnap])
 
   return (
     <li

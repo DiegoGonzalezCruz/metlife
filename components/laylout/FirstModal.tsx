@@ -13,7 +13,7 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
           !isModalOpen ? 'hidden' : 'fixed'
         }`}
       >
-        <div className="card h-fit mt-10 md:w-5/6 bg-white mx-auto relative rounded-xl">
+        <div className="card h-fit md:mt-2  md:w-5/6 bg-white relative rounded-xl m-1 md:mx-auto">
           <div className="wrapper w-3/4 mx-auto h-full py-10 flex flex-col gap-5 ">
             <div className="flex flex-row items-center justify-between">
               <h2 className="text-primary text-2xl md:text-3xl">Atención:</h2>
@@ -23,7 +23,7 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
                 onClick={() => setIsModalOpen(false)}
               />
             </div>
-            <p className="font-Montserrat md:text-base text-xs">
+            <p className="font-Montserrat md:text-sm text-xs">
               Declaro conocer y aceptar que la orientación médica es otorgada
               por profesionales de Care Assistance, quienes asumen la
               responsabilidad por los servicios otorgados en conformidad a la
@@ -33,10 +33,13 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
               intervención en cualquier orientación o recomendación médica así
               como en la prescripción de fármacos que los médicos de Care
               Assistance puedan indicarme al momento de recibir la atención de
-              telemedicina. Asimismo, declaro conocer que la Orientación Médica
-              otorgada no sustituye los chequeos regulares de salud con el
-              médico o profesional médico de su elección ni pretende reemplazar
-              una atención presencial y que en caso de emergencia médica debo
+              telemedicina.
+            </p>
+            <p className="font-Montserrat md:text-sm text-xs">
+              Asimismo, declaro conocer que la Orientación Médica otorgada no
+              sustituye los chequeos regulares de salud con el médico o
+              profesional médico de su elección ni pretende reemplazar una
+              atención presencial y que en caso de emergencia médica debo
               dirigirme a un centro de atención médica de urgencia de inmediato
               y que el examen físico del Usuario o Paciente que se realiza en
               forma virtual a través de la cámara del computador del Usuario o
@@ -44,7 +47,14 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
               en caso de estimarse necesario, el paciente se derivará a una
               consulta médica presencial.
             </p>
-            <Button onClick={() => setIsModalOpen(false)}>Acepto</Button>
+            <div className=" w-2/4 mx-auto flex flex-col items-center justify-center">
+              <Button
+                className={'bg-primary'}
+                onClick={() => setIsModalOpen(false)}
+              >
+                Acepto
+              </Button>
+            </div>
           </div>
         </div>
       </div>

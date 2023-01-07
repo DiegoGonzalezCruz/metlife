@@ -28,7 +28,7 @@ const ProgramList = ({ programs }: Programs) => {
 
   return (
     <div className="w-full h-full ">
-      <ul className="w-full h-fit flex flex-row overflow-scroll snap-x snap-mandatory md:gap-10 py-5 no-scrollbar">
+      <ul className="w-full h-fit flex flex-row overflow-scroll snap-x snap-mandatory md:gap-10 pt-5 debug1 no-scrollbar">
         {programs.map((program, idx: any) => {
           return (
             <ProgramCard
@@ -40,7 +40,7 @@ const ProgramList = ({ programs }: Programs) => {
           )
         })}
       </ul>
-      <ul className="w-full h-fit  flex flex-row items-center justify-around md:hidden">
+      <ul className=" w-full h-fit  flex flex-row items-center justify-around md:hidden">
         {bullets.map((bullet, idx) => {
           return (
             <li
@@ -52,7 +52,7 @@ const ProgramList = ({ programs }: Programs) => {
           )
         })}
       </ul>
-      <div className="w-full my-5 flex flex-row gap-5 items-center justify-center ">
+      <div className="w-full mb-5 flex flex-row gap-5 items-center justify-center debug1">
         {indexSnap !== 0 ? (
           <FontAwesomeIcon
             icon={faArrowLeft}

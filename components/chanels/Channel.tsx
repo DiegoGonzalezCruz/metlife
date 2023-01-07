@@ -15,7 +15,7 @@ const Channel = ({ channel, setIndexSnap, idx }: Channel) => {
       // console.log(entry, 'entry***')
       setIndexSnap(idx)
     }
-  }, [inView])
+  }, [inView, idx, setIndexSnap])
 
   return (
     <li
