@@ -20,10 +20,10 @@ const ProgramCard = ({
     <div className="">
       <div
         id={`programa${idx}`}
-        className=" shadow-xl rounded-xl snap-start md:snap-center scroll-smooth  h-full  shrink-0 first:ml-10 last:mr-10 flex flex-col items-center mt-5 "
+        className="debug1 items-stretch shadow-xl rounded-xl snap-start md:snap-center scroll-smooth  h-full  first:ml-10 last:mr-10 flex flex-col  mt-5 "
       >
         <div className="w-full h-full flex flex-col items-center justify-around gap-5 px-5 py-5">
-          <div className=" w-full h-fit  flex flex-col gap-5">
+          <div className=" w-full h-fit  flex flex-col gap-5 ">
             <Image
               src={program.acf.imagen}
               alt={program.acf.titulo}
@@ -35,13 +35,21 @@ const ProgramCard = ({
               <h2 className=" text-primary text-xl md:text-sm font-normal font-Montserrat ">
                 {program.acf.pretitle}
                 <br />
-                <span className="text-primary text-xl md:text-2xl font-Montserrat font-bold ">
+                <span
+                  className={`text-primary text-base 
+                  ${
+                    program.acf.posttitle === 'Hospitalización domiciliaria'
+                      ? 'md:text-base'
+                      : 'md:text-xl'
+                  } 
+                  font-Montserrat font-bold `}
+                >
                   {program.acf.posttitle}
                 </span>{' '}
               </h2>
             </div>
           </div>
-          <div className=" w-3/4 mx-auto h-fit flex flex-col gap-5 justify-end z-40 relative">
+          <div className=" w-fit mx-auto h-fit flex flex-col gap-5 justify-end z-40 relative">
             <Button
               onClick={() => modalOpener(program as any)}
               className="bg-secondary text-sm z-40"

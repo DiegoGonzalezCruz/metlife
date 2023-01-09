@@ -25,10 +25,13 @@ const ProgramList = ({
           },
           // when window width is >= 768px
           768: {
+            slidesPerView: 2
+          },
+          1024: {
             slidesPerView: 4
           }
         }}
-        spaceBetween={0}
+        spaceBetween={-60}
         pagination={{
           clickable: true
         }}
@@ -36,7 +39,7 @@ const ProgramList = ({
         modules={[Pagination, Navigation, Scrollbar, Mousewheel]}
         // className="w-full h-fit flex flex-row overflow-scroll snap-x snap-mandatory md:gap-10 pt-5  no-scrollbar"
         grabCursor={true}
-        className=" min-h-[50vh] md:min-h-full flex flex-col gap-5"
+        // className=" min-h-[50vh] md:min-h-full flex flex-col "
       >
         {programs.map((program, idx: any) => {
           return (
