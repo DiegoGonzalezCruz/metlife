@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import Channel from './Channel'
+import { Mousewheel, Navigation, Pagination, Scrollbar } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 const channels = [
   {
@@ -50,19 +52,43 @@ export const Channels = () => {
         Ponemos a tu disposición, canales de atención exclusivos y recursos de
         comunicación estratégica, creados a la medida de tus necesidades.
       </p>
-      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 gap-5 py-5 md:justify-between no-scrollbar w-full">
+      {/* <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 gap-5 py-5 md:justify-between no-scrollbar w-full"> */}
+      <Swiper
+        breakpoints={{
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 3
+          }
+        }}
+        spaceBetween={10}
+        pagination={{
+          clickable: true
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation, Scrollbar, Mousewheel]}
+        // className="w-full h-fit flex flex-row overflow-scroll snap-x snap-mandatory md:gap-10 pt-5  no-scrollbar"
+        grabCursor={true}
+        className=" min-h-[40vh] md:min-h-full flex flex-col  gap-5"
+      >
         {channels.map((channel, idx) => {
           return (
-            <Channel
-              channel={channel}
-              key={channel.title}
-              idx={idx}
-              setIndexSnap={setIndexSnap}
-            />
+            <SwiperSlide key={channel.title}>
+              <Channel
+                channel={channel}
+                key={channel.title}
+                idx={idx}
+                setIndexSnap={setIndexSnap}
+              />
+            </SwiperSlide>
           )
         })}
-      </ul>
-      <ul className="md:hidden flex flex-row gap-5 items-center justify-center no-scrollbar">
+        {/* </ul> */}
+      </Swiper>
+      {/* <ul className="md:hidden flex flex-row gap-5 items-center justify-center no-scrollbar">
         {channels.map((c, cidx) => {
           return (
             <li
@@ -73,7 +99,7 @@ export const Channels = () => {
             ></li>
           )
         })}
-      </ul>
+      </ul> */}
     </div>
   )
 }

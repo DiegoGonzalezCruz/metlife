@@ -21,7 +21,7 @@ const Channel = ({ channel, setIndexSnap, idx }: Channel) => {
     <li
       ref={ref}
       key={channel.title}
-      className=" rounded-xl shrink-0 w-full md:w-1/4  md:shadow-2xl  snap-start   my-5 overflow-hidden "
+      className=" rounded-xl shrink-0 w-full   md:shadow-2xl  snap-start   my-5 overflow-hidden "
     >
       <div className="w-full h-fit flex flex-col items-center justify-between gap-5 ">
         <Image

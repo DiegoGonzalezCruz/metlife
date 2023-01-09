@@ -14,21 +14,21 @@ const ProgramList = ({
   setIsProgramModalOpen
 }: Programs) => {
   return (
-    <div className="w-full h-fit min-h-full z-30  ">
+    <div className="w-full h-fit min-h-full z-30 ">
       <Swiper
         breakpoints={{
           // when window width is >= 640px
           640: {
-            width: 640,
             slidesPerView: 1
+            // centeredSlides: true,
+            // centeredSlidesBounds: true
           },
           // when window width is >= 768px
           768: {
-            width: 768,
-            slidesPerView: 2
+            slidesPerView: 4
           }
         }}
-        spaceBetween={10}
+        spaceBetween={0}
         pagination={{
           clickable: true
         }}
