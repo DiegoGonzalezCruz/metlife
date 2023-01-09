@@ -44,6 +44,9 @@ export const Explore = () => {
             },
             // when window width is >= 768px
             768: {
+              slidesPerView: 2
+            },
+            1024: {
               slidesPerView: 3
             }
           }}
@@ -55,11 +58,11 @@ export const Explore = () => {
           modules={[Pagination, Navigation, Scrollbar, Mousewheel]}
           grabCursor={true}
           // className=" min-h-[50vh] md:min-h-full flex flex-col gap-5"
-          className=" min-h-[45vh] w-full flex flex-row items-start justify-around  "
+          className=" min-h-[45vh] w-full flex flex-row  justify-around  items-stretch  "
         >
           {benefits.map((benefit, idx) => {
             return (
-              <SwiperSlide key={benefit.img} className="w-full ">
+              <SwiperSlide key={benefit.img} className=" ">
                 <BenefitCard
                   benefit={benefit}
                   setIndexSnap={setIndexSnap}

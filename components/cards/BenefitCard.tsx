@@ -21,7 +21,7 @@ const BenefitCard = ({ benefit, setIndexSnap, idx }: Benefit) => {
     <li
       ref={ref}
       key={benefit.description}
-      className=" shrink-0 w-full  h-full flex  flex-col gap-5  snap-start px-5  "
+      className=" w-full  h-full flex flex-col gap-5  snap-start px-5 items-stretch  "
     >
       <Image
         src={benefit.img}
@@ -33,7 +33,7 @@ const BenefitCard = ({ benefit, setIndexSnap, idx }: Benefit) => {
       <h2 className=" w-full text-center text-primary text-xl md:text-2xl font-Titillium">
         {benefit.description}
       </h2>
-      <ButtonWhite className="bg-white w-3/4 mx-auto">
+      <ButtonWhite className="bg-white w-fit mx-auto">
         {benefit.text}
       </ButtonWhite>
     </li>

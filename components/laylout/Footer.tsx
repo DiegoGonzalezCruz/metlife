@@ -11,14 +11,14 @@ export const Footer = () => {
             alt="metlife"
             width={100}
             height={100}
-            className=" h-10  w-fit  md:h-10 md:w-fit"
+            className=" h-6 w-fit   max-w-xs "
           />
           <Image
             src="/img/logos/poweredCA.png"
             alt="metlife"
             width={100}
             height={100}
-            className=" h-14 w-fit  md:h-14 md:w-fit"
+            className=" h-14 max-w-xs "
           />
         </div>
         <div className="w-full flex flex-row  gap-5 my-2 ">

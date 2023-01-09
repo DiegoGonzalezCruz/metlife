@@ -46,9 +46,8 @@ export default function Home({ programs }: Programs) {
           setIsProgramModalOpen={setIsProgramModalOpen}
         />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+
+      <Footer />
     </div>
   )
 }
