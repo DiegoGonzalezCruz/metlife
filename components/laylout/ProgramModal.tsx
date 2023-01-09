@@ -46,15 +46,15 @@ const ProgramModal = ({
         >
           <div className="modal-box w-11/12 max-w-5xl bg-white  relative debug overflow-hidden rounded-xl">
             <div className=" wrapper w-full mx-auto h-full  flex flex-col justify-between overflow-hidden gap-5  ">
-              <div className=" h-1/2 w-full   flex flex-row overflow-hidden relative">
+              <div className=" h-1/2 w-full   flex flex-row overflow-hidden items-center justify-between relative">
                 <label
                   htmlFor="program-modal"
-                  className="btn btn-sm btn-circle cursor-pointer absolute top-0 right-0 m-4 z-20"
+                  className="btn btn-sm btn-circle cursor-pointer absolute top-0 right-0 m-4 z-20 md:hidden flex"
                   onClick={() => setIsProgramModalOpen(false)}
                 >
                   ✕
                 </label>
-                <div className="  flex flex-row items-center justify-around w-1/2 md:w-1/3   md:translate-x-10 z-20 ">
+                <div className="  flex flex-row items-center justify-around  w-1/2 md:w-1/3   md:translate-x-10 z-20 ">
                   <Image
                     src={programToView.acf.icono_white}
                     alt={programToView.acf.icono_white}

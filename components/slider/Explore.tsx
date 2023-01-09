@@ -27,7 +27,7 @@ export const Explore = () => {
   return (
     <div className="w-full my-10 h-full ">
       <div className="w-5/6 mx-auto h-full ">
-        <div className="flex items-center justify-center my-5  ">
+        <div className="flex items-center justify-center my-5   ">
           <h2 className="text-primary text-xl font-Montserrat font-normal text-center">
             Explora
             <br />
@@ -36,17 +36,15 @@ export const Explore = () => {
             </span>
           </h2>
         </div>
+
         <Swiper
           breakpoints={{
-            // when window width is >= 640px
             640: {
-              width: 640,
               slidesPerView: 1
             },
             // when window width is >= 768px
             768: {
-              width: 768,
-              slidesPerView: 2
+              slidesPerView: 3
             }
           }}
           spaceBetween={50}
@@ -57,11 +55,11 @@ export const Explore = () => {
           modules={[Pagination, Navigation, Scrollbar, Mousewheel]}
           grabCursor={true}
           // className=" min-h-[50vh] md:min-h-full flex flex-col gap-5"
-          className=" min-h-[45vh] flex flex-row items-start justify-around  "
+          className=" min-h-[45vh] w-full flex flex-row items-start justify-around  "
         >
           {benefits.map((benefit, idx) => {
             return (
-              <SwiperSlide key={benefit.img} className="">
+              <SwiperSlide key={benefit.img} className="w-full ">
                 <BenefitCard
                   benefit={benefit}
                   setIndexSnap={setIndexSnap}
