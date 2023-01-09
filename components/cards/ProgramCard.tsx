@@ -3,20 +3,21 @@ import { useState } from 'react'
 import { Program, ProgramsModal } from '../../types'
 import Button from '../buttons/Button'
 import ProgramModal from '../laylout/ProgramModal'
-import { useInView } from 'react-intersection-observer'
 
-const ProgramCard = ({ program, idx, setIndexSnap }: Program) => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [programToModal, setProgramToModal] = useState<ProgramsModal>()
-
+const ProgramCard = ({
+  program,
+  idx,
+  setIsProgramModalOpen,
+  setProgramToModal
+}: Program) => {
   const modalOpener = (prgm: ProgramsModal) => {
     // console.log('modal open', prgm)
-    setIsModalOpen(true)
+    setIsProgramModalOpen(true)
     setProgramToModal(prgm)
   }
 
   return (
-    <>
+    <div className="">
       <div
         id={`programa${idx}`}
         className=" shadow-xl rounded-xl snap-start md:snap-center scroll-smooth  h-full  shrink-0 first:ml-10 last:mr-10 flex flex-col items-center mt-5 "
@@ -40,7 +41,7 @@ const ProgramCard = ({ program, idx, setIndexSnap }: Program) => {
               </h2>
             </div>
           </div>
-          <div className=" w-full h-fit flex flex-col gap-5 justify-end ">
+          <div className=" w-3/4 mx-auto h-fit flex flex-col gap-5 justify-end">
             <Button
               onClick={() => modalOpener(program as any)}
               className="bg-secondary text-sm "
@@ -50,12 +51,7 @@ const ProgramCard = ({ program, idx, setIndexSnap }: Program) => {
           </div>
         </div>
       </div>
-      <ProgramModal
-        program={programToModal}
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-      />
-    </>
+    </div>
   )
 }
 

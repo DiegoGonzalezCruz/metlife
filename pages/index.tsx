@@ -9,12 +9,16 @@ import { SecondarySlider } from '../components/slider/SecondarySlider'
 
 import { GetStaticProps } from 'next'
 import { Program, Programs } from '../types'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import FirstModal from '../components/laylout/FirstModal'
+import ProgramModal from '../components/laylout/ProgramModal'
 
 export default function Home({ programs }: Programs) {
   // console.log('programs***', programs)
   const [isModalOpen, setIsModalOpen] = useState(true)
+  const [isProgramModalOpen, setIsProgramModalOpen] = useState(true)
+
+  const [programToModal, setProgramToModal] = useState<Program | null>(null)
 
   return (
     <div className={''}>
@@ -27,11 +31,20 @@ export default function Home({ programs }: Programs) {
       <main className="w-screen h-full">
         <Navigation />
         <MainSlider />
-        <ProgramSlider programs={programs} />
+        <ProgramSlider
+          setProgramToModal={setProgramToModal}
+          setIsProgramModalOpen={setIsProgramModalOpen}
+          programs={programs}
+        />
         <Channels />
         <SecondarySlider />
         <Explore />
         <FirstModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        <ProgramModal
+          program={programToModal}
+          isProgramModalOpen={isProgramModalOpen}
+          setIsProgramModalOpen={setIsProgramModalOpen}
+        />
       </main>
       <footer>
         <Footer />

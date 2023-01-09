@@ -9,11 +9,11 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
   if (isModalOpen) {
     return (
       <div
-        className={`z-50 top-0  w-screen h-screen bg-input/50 ${
+        className={`z-50 top-0 flex flex-col items-center justify-center  w-screen h-screen bg-input/50 ${
           !isModalOpen ? 'hidden' : 'fixed'
         }`}
       >
-        <div className="card h-fit md:mt-2  md:w-5/6 bg-white relative rounded-xl m-1 md:mx-auto">
+        <div className=" md:h-fit md:w-5/6 lg:w-1/2 bg-white relative rounded-xl md:mx-auto md:my-auto">
           <div className="wrapper w-3/4 mx-auto h-full py-10 flex flex-col gap-5 ">
             <div className="flex flex-row items-center justify-between">
               <h2 className="text-primary text-2xl md:text-3xl">Atención:</h2>

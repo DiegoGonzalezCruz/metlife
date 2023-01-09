@@ -5,6 +5,8 @@ export interface Program {
   idx?: number
   ref?: any
   setIndexSnap?: Dispatch<SetStateAction<boolean>>
+  setProgramToModal?: any
+  setIsProgramModalOpen?: any
   program: {
     acf: {
       titulo: string
@@ -49,6 +51,8 @@ export interface ProgramsModal {
   setIsModalOpen: Function
 }
 export interface Programs {
+  setProgramToModal: Function
+  setIsProgramModalOpen?: any
   programs: {
     acf: {
       titulo: string
