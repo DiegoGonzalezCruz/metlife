@@ -22,14 +22,15 @@ const ProgramModal = ({
     {
       title: 'Consulta Online',
       img: '/img/logos/program-features/cellphone.svg'
-    },
-    {
-      title: 'Agendamiento',
-      img: '/img/logos/program-features/telemedicina.svg'
     }
   ]
+  const contactTelemedicine = {
+    title: 'Agendamiento',
+    img: '/img/logos/program-features/telemedicina.svg'
+  }
 
   const programToView = program
+  // console.log(programToView, 'programToView')
   if (programToView) {
     return (
       <>
@@ -44,15 +45,15 @@ const ProgramModal = ({
           } `}
         >
           <div className="modal-box w-11/12 max-w-5xl bg-white  relative debug overflow-hidden rounded-xl">
-            <div className=" wrapper w-full mx-auto h-full  flex flex-col justify-between gap-5  ">
-              <div className=" h-1/2   flex flex-row justify-between  ">
+            <div className=" wrapper w-full mx-auto h-full  flex flex-col justify-between overflow-hidden gap-5  ">
+              <div className=" h-1/2   flex flex-row justify-between overflow-hidden ">
                 <div className=" flex flex-row items-center justify-around w-1/2 md:w-1/3   translate-x-10 z-20 ">
                   <Image
                     src={programToView.acf.icono_white}
                     alt={programToView.acf.icono_white}
-                    width={400}
-                    height={400}
-                    className=" w-full"
+                    width={800}
+                    height={800}
+                    className=" w-fit h-20"
                   />
                 </div>
                 <div className="w-1/2  h-full md:w-1/3 flex items-center  relative ">
@@ -86,30 +87,37 @@ const ProgramModal = ({
                           alt={feat.title}
                           className=" w-fit h-full"
                         />
-                        <p className="text-base text-primary  w-fit">
+                        <p className="text-base text-primary w-fit">
                           {feat.title}
                         </p>
                       </div>
                     </li>
                   )
                 })}
+                {programToView.slug === '2-2-consulta-medica' ? (
+                  <li className=" border border-primary rounded-full  w-full ">
+                    <div className=" h-12 py-2 w-full px-2 flex md:flex-row  items-center justify-center gap-2 ">
+                      <Image
+                        src={contactTelemedicine.img}
+                        width={20}
+                        height={40}
+                        alt={contactTelemedicine.title}
+                        className=" w-fit h-full"
+                      />
+                      <p className="text-base text-primary w-fit">
+                        {contactTelemedicine.title}
+                      </p>
+                    </div>
+                  </li>
+                ) : null}
               </ul>
               <div className=" bg-backgroundDark py-5 px-10 flex flex-row items-center justify-between h-fit w-full gap-10">
                 <p className="text-sm text-primary text-center">
                   {programToView.acf.horario}
                 </p>
-              </div>
-              <div className="modal-action ">
-                {/* <label
-                  htmlFor="program-modal"
-                  className="btn btn-primary "
-                  onClick={() => setIsProgramModalOpen(false)}
-                >
-                  Yay!
-                </label> */}
                 <label
                   htmlFor="program-modal"
-                  className="btn btn-sm btn-circle absolute right-4 top-2 z-40 cursor-pointer "
+                  className="btn btn-sm btn-circle cursor-pointer  "
                   onClick={() => setIsProgramModalOpen(false)}
                 >
                   ✕

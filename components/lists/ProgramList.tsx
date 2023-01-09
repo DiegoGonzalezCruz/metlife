@@ -21,7 +21,7 @@ const ProgramList = ({
   setIsProgramModalOpen
 }: Programs) => {
   return (
-    <div className="w-full h-full z-30 ">
+    <div className="w-full h-fit z-30 ">
       <Swiper
         breakpoints={{
           // when window width is >= 640px
@@ -43,7 +43,7 @@ const ProgramList = ({
         modules={[Pagination, Navigation, Scrollbar]}
         // className="w-full h-fit flex flex-row overflow-scroll snap-x snap-mandatory md:gap-10 pt-5  no-scrollbar"
         grabCursor={true}
-        className=""
+        className=" min-h-[50vh] md:min-h-full flex flex-col gap-5"
       >
         {programs.map((program, idx: any) => {
           return (
