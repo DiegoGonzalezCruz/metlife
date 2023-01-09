@@ -41,10 +41,10 @@ const ProgramCard = ({
               </h2>
             </div>
           </div>
-          <div className=" w-3/4 mx-auto h-fit flex flex-col gap-5 justify-end">
+          <div className=" w-3/4 mx-auto h-fit flex flex-col gap-5 justify-end z-40 relative">
             <Button
               onClick={() => modalOpener(program as any)}
-              className="bg-secondary text-sm "
+              className="bg-secondary text-sm z-40"
             >
               Conocer más
             </Button>
