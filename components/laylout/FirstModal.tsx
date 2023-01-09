@@ -19,7 +19,7 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
               <h2 className="text-primary text-2xl md:text-3xl">Atención:</h2>
               <FontAwesomeIcon
                 icon={faXmark}
-                className="text-3xl text-primary"
+                className="text-3xl text-primary cursor-pointer"
                 onClick={() => setIsModalOpen(false)}
               />
             </div>

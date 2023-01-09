@@ -7,7 +7,7 @@ import ButtonWhite from '../buttons/ButtonWhite'
 const BenefitCard = ({ benefit, setIndexSnap, idx }: Benefit) => {
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0.8
+    threshold: 1
   })
   useEffect(() => {
     if (inView) {
@@ -21,7 +21,7 @@ const BenefitCard = ({ benefit, setIndexSnap, idx }: Benefit) => {
     <li
       ref={ref}
       key={benefit.description}
-      className="shrink-0 w-full md:w-1/4 h-full flex  flex-col gap-5  snap-start "
+      className=" shrink-0 w-full  h-full flex  flex-col gap-5  snap-start px-5 "
     >
       <Image
         src={benefit.img}

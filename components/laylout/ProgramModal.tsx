@@ -46,14 +46,21 @@ const ProgramModal = ({
         >
           <div className="modal-box w-11/12 max-w-5xl bg-white  relative debug overflow-hidden rounded-xl">
             <div className=" wrapper w-full mx-auto h-full  flex flex-col justify-between overflow-hidden gap-5  ">
-              <div className=" h-1/2   flex flex-row justify-between overflow-hidden ">
-                <div className=" flex flex-row items-center justify-around w-1/2 md:w-1/3   translate-x-10 z-20 ">
+              <div className=" h-1/2 w-full   flex flex-row overflow-hidden relative">
+                <label
+                  htmlFor="program-modal"
+                  className="btn btn-sm btn-circle cursor-pointer absolute top-0 right-0 m-4 z-20"
+                  onClick={() => setIsProgramModalOpen(false)}
+                >
+                  ✕
+                </label>
+                <div className="  flex flex-row items-center justify-around w-1/2 md:w-1/3   md:translate-x-10 z-20 ">
                   <Image
                     src={programToView.acf.icono_white}
                     alt={programToView.acf.icono_white}
                     width={800}
                     height={800}
-                    className=" w-fit h-20"
+                    className=" w-fit md:h-20 h-16 object-contain pl-5 "
                   />
                 </div>
                 <div className="w-1/2  h-full md:w-1/3 flex items-center  relative ">
@@ -67,12 +74,12 @@ const ProgramModal = ({
                   <div className="absolute z-10 bg-gradient-to-r from-white/95 to-white/0 h-full w-full"></div>
                 </div>
               </div>
-              <div className=" h-fit w-full flex flex-col items-center justify-between px-10">
+              <div className=" h-fit w-full flex flex-col items-center justify-between px-5">
                 <p className="text-primary text-center font-Titillium  w-full">
                   {programToView.acf.description}
                 </p>
               </div>
-              <ul className=" flex md:flex-row flex-col gap-2 items-center justify-between md:px-10  px-10">
+              <ul className=" flex md:flex-row flex-col gap-2 items-center justify-between md:px-10  px-5">
                 {contactArray.map((feat) => {
                   return (
                     <li
@@ -117,7 +124,7 @@ const ProgramModal = ({
                 </p>
                 <label
                   htmlFor="program-modal"
-                  className="btn btn-sm btn-circle cursor-pointer  "
+                  className="btn btn-sm btn-circle cursor-pointer md:flex hidden "
                   onClick={() => setIsProgramModalOpen(false)}
                 >
                   ✕

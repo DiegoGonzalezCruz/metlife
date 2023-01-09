@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import React, { useState } from 'react'
-import ButtonWhite from '../buttons/ButtonWhite'
 import BenefitCard from '../cards/BenefitCard'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Mousewheel, Navigation, Pagination, Scrollbar } from 'swiper'
 
 const benefits = [
   {
@@ -36,30 +36,42 @@ export const Explore = () => {
             </span>
           </h2>
         </div>
-        <ul className=" flex flex-row items-start justify-around gap-5 snap-x snap-mandatory w-full h-full  overflow-scroll no-scrollbar py-5">
+        <Swiper
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 1
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 2
+            }
+          }}
+          spaceBetween={50}
+          pagination={{
+            clickable: true
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation, Scrollbar, Mousewheel]}
+          grabCursor={true}
+          // className=" min-h-[50vh] md:min-h-full flex flex-col gap-5"
+          className=" min-h-[45vh] flex flex-row items-start justify-around  "
+        >
           {benefits.map((benefit, idx) => {
             return (
-              <BenefitCard
-                benefit={benefit}
-                setIndexSnap={setIndexSnap}
-                idx={idx}
-                key={benefit.img}
-              />
+              <SwiperSlide key={benefit.img} className="">
+                <BenefitCard
+                  benefit={benefit}
+                  setIndexSnap={setIndexSnap}
+                  idx={idx}
+                  key={benefit.img}
+                />
+              </SwiperSlide>
             )
           })}
-        </ul>
-        <ul className="md:hidden flex flex-row gap-5 items-center justify-center no-scrollbar">
-          {benefits.map((c, cidx) => {
-            return (
-              <li
-                key={cidx}
-                className={`h-4 w-4 ${
-                  cidx === indexSnap ? 'bg-primary' : 'bg-white'
-                } border border-primary rounded-full`}
-              ></li>
-            )
-          })}
-        </ul>
+        </Swiper>
       </div>
     </div>
   )

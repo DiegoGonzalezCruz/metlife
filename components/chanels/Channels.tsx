@@ -50,7 +50,7 @@ export const Channels = () => {
         Ponemos a tu disposición, canales de atención exclusivos y recursos de
         comunicación estratégica, creados a la medida de tus necesidades.
       </p>
-      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 md:gap-5 py-5 md:justify-between no-scrollbar w-full">
+      <ul className=" snap-x snap-mandatory flex flex-row overflow-scroll my-5 gap-5 py-5 md:justify-between no-scrollbar w-full">
         {channels.map((channel, idx) => {
           return (
             <Channel
