@@ -20,9 +20,9 @@ const ProgramCard = ({
     <div className="">
       <div
         id={`programa${idx}`}
-        className="debug1 items-stretch shadow-xl rounded-xl snap-start md:snap-center scroll-smooth  h-full  first:ml-10 last:mr-10 flex flex-col  mt-5 "
+        className=" my-10 shadow-xl rounded-xl snap-start md:snap-center scroll-smooth  h-full  first:ml-10 last:mr-10 flex flex-col  mt-5 "
       >
-        <div className="w-full h-full flex flex-col items-center justify-around gap-5 px-5 py-5">
+        <div className=" w-full h-full flex flex-col items-stretch justify-around gap-5 px-5 py-5">
           <div className=" w-full h-fit  flex flex-col gap-5 ">
             <Image
               src={program.acf.imagen}

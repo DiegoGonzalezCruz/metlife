@@ -13,7 +13,7 @@ const FirstModal = ({ isModalOpen, setIsModalOpen }: any) => {
           !isModalOpen ? 'hidden' : 'fixed'
         }`}
       >
-        <div className=" md:h-fit md:w-5/6 lg:w-1/2 bg-white relative rounded-xl md:mx-auto md:my-auto">
+        <div className=" md:h-fit md:w-5/6 xl:w-1/2 bg-white relative rounded-xl md:mx-auto md:my-auto ">
           <div className="wrapper w-3/4 mx-auto h-full py-10 flex flex-col gap-5 ">
             <div className="flex flex-row items-center justify-between">
               <h2 className="text-primary text-2xl md:text-3xl">Atención:</h2>
