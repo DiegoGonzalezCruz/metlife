@@ -48,7 +48,7 @@ export const Channels = () => {
           exclusivos
         </span>
       </div>
-      <p className="w-full mx-auto text-black text-center py-5 text-base font-medium">
+      <p className="w-full mx-auto text-black text-center py-5 text-base font-medium font-Titillium">
         Ponemos a tu disposición, canales de atención exclusivos y recursos de
         comunicación estratégica, creados a la medida de tus necesidades.
       </p>

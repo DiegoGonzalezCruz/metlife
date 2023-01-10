@@ -29,7 +29,9 @@ export const SecondarySlider = () => {
               />
               <div className="flex flex-col items-center justify-center gap-5 md:w-1/2 h-full py-5   ">
                 <div className="w-3/4 mx-auto flex flex-col gap-5 ">
-                  <p className="text-white text-center">{feat.description}</p>
+                  <p className="text-white text-center font-Titillium">
+                    {feat.description}
+                  </p>
                   <Button className="font-Montserrat font-bold w-fit mx-auto px-10 py-2">
                     Comprar online
                   </Button>

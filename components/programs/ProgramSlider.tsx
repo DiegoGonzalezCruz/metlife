@@ -10,7 +10,9 @@ export const ProgramSlider = ({
   return (
     <div className="w-full h-full ">
       <div className="w-full h-full flex flex-col items-center justify-center my-5">
-        <h2 className="text-primary font-normal text-xl">Conoce tus</h2>
+        <h2 className="text-primary  text-xl font-Titillium font-normal">
+          Conoce tu
+        </h2>
         <span className="text-secondaryDark font-bold text-2xl">
           programas online
         </span>
