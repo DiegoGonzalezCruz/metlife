@@ -5,25 +5,21 @@ export const Footer = () => {
   return (
     <footer className=" w-full mx-auto h-fit md:h-full bg-backgroundDark flex flex-col ">
       <div className="w-5/6  h-full flex flex-col items-center justify-center mx-auto ">
-        <div className=" flex flex-row justify-between items-center py-5 w-full ">
-          <div className=" w-fit h-full ">
-            <Image
-              src="/img/logos/metlife.png"
-              alt="metlife"
-              width={300}
-              height={200}
-              className=" h-20 w-fit   "
-            />
-          </div>
-          <div className=" w-fit h-full">
-            <Image
-              src="/img/logos/poweredCA.png"
-              alt="metlife"
-              width={100}
-              height={100}
-              className=" h-full w-fit  "
-            />
-          </div>
+        <div className=" flex flex-row justify-between items-center py-10 w-full ">
+          <Image
+            src="/img/logos/metlife.png"
+            alt="metlife"
+            width={300}
+            height={200}
+            className=" h-9 w-fit   "
+          />
+          <Image
+            src="/img/logos/poweredCA.png"
+            alt="metlife"
+            width={100}
+            height={100}
+            className=" h-14 w-fit  "
+          />
         </div>
         <div className="w-full flex flex-row  gap-5 my-2 ">
           <p className="text-sm text-primary font-Titillium ">
