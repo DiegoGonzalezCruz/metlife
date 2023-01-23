@@ -3,19 +3,11 @@ import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Channel } from '../../types'
 
-const Channel = ({ channel, setIndexSnap, idx }: Channel) => {
+const Channel = ({ channel }: Channel) => {
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.8
   })
-
-  useEffect(() => {
-    if (inView) {
-      // console.log('visible')
-      // console.log(entry, 'entry***')
-      setIndexSnap(idx)
-    }
-  }, [inView, idx, setIndexSnap])
 
   return (
     <li

@@ -69,7 +69,7 @@ export interface Programs {
 }
 
 export interface Channel {
-  setIndexSnap: Dispatch<SetStateAction<boolean>>
+  setIndexSnap?: Dispatch<SetStateAction<boolean>>
   idx?: number
   channel: {
     img: string

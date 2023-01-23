@@ -32,12 +32,20 @@ const channels = [
         <br /> <b>600 945 9800</b>
       </p>
     )
+  },
+  {
+    img: '/img/channels/lineaexclusiva.svg',
+    title: 'Chat Online',
+    text: (
+      <p>
+        Chatea con un
+        <br /> <b>especialista</b>
+      </p>
+    )
   }
 ]
 
 export const Channels = () => {
-  const [indexSnap, setIndexSnap] = useState<number>(0)
-
   return (
     <div className="w-5/6 mx-auto py-10  ">
       <div className=" text-center w-full ">
@@ -61,7 +69,7 @@ export const Channels = () => {
           },
           // when window width is >= 768px
           768: {
-            slidesPerView: 3
+            slidesPerView: 4
           }
         }}
         spaceBetween={10}
@@ -77,12 +85,7 @@ export const Channels = () => {
         {channels.map((channel, idx) => {
           return (
             <SwiperSlide key={channel.title}>
-              <Channel
-                channel={channel}
-                key={channel.title}
-                idx={idx}
-                setIndexSnap={setIndexSnap}
-              />
+              <Channel channel={channel} key={channel.title} idx={idx} />
             </SwiperSlide>
           )
         })}

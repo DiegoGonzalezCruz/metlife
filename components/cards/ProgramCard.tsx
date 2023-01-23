@@ -20,10 +20,10 @@ const ProgramCard = ({
     <div className="">
       <div
         id={`programa${idx}`}
-        className=" my-10 shadow-xl rounded-xl snap-start md:snap-center scroll-smooth  h-full  first:ml-10 last:mr-10 flex flex-col  mt-5 "
+        className=" my-10 shadow-xl rounded-xl snap-start md:snap-center scroll-smooth  h-72 first:ml-10 last:mr-10 flex flex-col  mt-5 "
       >
-        <div className=" w-full h-full flex flex-col items-stretch justify-around gap-5 px-5 py-5">
-          <div className=" w-full h-fit  flex flex-col gap-5 ">
+        <div className=" my-5 w-full h-full flex flex-col items-stretch justify-around px-5 ">
+          <div className=" w-full h-full  flex flex-col gap-5  ">
             <Image
               src={program.acf.imagen}
               alt={program.acf.titulo}
@@ -38,7 +38,8 @@ const ProgramCard = ({
                 <span
                   className={`text-primary text-base 
                   ${
-                    program.acf.posttitle === 'Hospitalización domiciliaria'
+                    program.acf.posttitle === 'Hospitalización domiciliaria' ||
+                    program.acf.posttitle === 'Salud Sexual'
                       ? 'md:text-base'
                       : 'md:text-xl'
                   } 

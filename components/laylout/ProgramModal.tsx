@@ -18,10 +18,13 @@ const ProgramModal = ({
       title: '600 945 9800',
       img: '/img/logos/program-features/landline.svg'
     },
-    { title: '+56 9 9968 7935', img: '/img/logos/program-features/chat.svg' },
+    {
+      title: '+56 9 9968 7935',
+      img: '/img/logos/program-features/cellphone.svg'
+    },
     {
       title: 'Consulta Online',
-      img: '/img/logos/program-features/cellphone.svg'
+      img: '/img/logos/program-features/chat.svg'
     }
   ]
   const contactTelemedicine = {
@@ -44,7 +47,7 @@ const ProgramModal = ({
             isProgramModalOpen ? 'flex' : 'hidden'
           } `}
         >
-          <div className="modal-box w-11/12 max-w-5xl bg-white  relative debug overflow-hidden rounded-xl">
+          <div className="  modal-box w-11/12 max-w-4xl bg-white  relative debug overflow-hidden rounded-xl">
             <div className=" wrapper w-full mx-auto h-full  flex flex-col justify-between overflow-hidden gap-5  ">
               <div className=" h-1/2 w-full   flex flex-row overflow-hidden items-center justify-between relative">
                 <label
