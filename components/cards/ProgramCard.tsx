@@ -27,8 +27,8 @@ const ProgramCard = ({
             <Image
               src={program.acf.imagen}
               alt={program.acf.titulo}
-              width={150}
-              height={150}
+              width={500}
+              height={500}
               className="rounded-full mx-auto  h-24 w-fit "
             />
             <div className=" w-full h-fit text-center  ">

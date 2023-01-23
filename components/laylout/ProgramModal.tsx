@@ -61,9 +61,9 @@ const ProgramModal = ({
                   <Image
                     src={programToView.acf.icono_white}
                     alt={programToView.acf.icono_white}
-                    width={800}
-                    height={800}
-                    className=" w-fit md:h-20 h-16 object-contain pl-5 "
+                    width={1200}
+                    height={1200}
+                    className=" w-56 md:h-20 h-16 object-contain pl-5 "
                   />
                 </div>
                 <div className="w-1/2  h-full md:w-1/3 flex items-center  relative ">
